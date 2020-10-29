@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+<head>
+<title>Online Digital Healthcare System</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<center><font size="4" color="yellow">Online Digital Healthcare System</font></center>
+		</div>
+		<div id="slogan">
+			
+		</div>
+	</div>
+	<div id="menu">
+		<ul><center>
+	  <li><a href="{% url 'ViewPatientRequest' %}">View Patient Requests</a></li>
+	   <li><a href="{% url 'index' %}">Logout</a></li>
+			
+		</center></ul>
+<br class="clearfix" />
+				</div>
+			
+	<div id="splash">
+		<img class="pic" src="{% static 'images/investor.jpg' %}" width="870" height="230" alt="" />
+	</div>	
+			<center>
+
+   <h3><b>View Patients Request Screen</b></h3>
+   
+						
+						<table align="center" border="1">
+						<tr><th>Patient Name</th><th>Doctor Name</th><th>Patient Query</th>
+						<th>Prescription</th><th>Request Date</th><th>Give Prescription</th>
+			 
+		 {{ data|safe }}
+		
+			</table>
+				</div>	
+					
+				</div>
+				<br/><br/><br/><br/><br/><br/>
+				
+	</body>
+</html>
